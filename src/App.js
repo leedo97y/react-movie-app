@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+// 작성한 코드에 한번만 쓰고 싶은 코드와 여러번 쓸 수 있는 코드가 있을 텐데
+// useEffect를 이용하면 이를 구분해 줄 수 있다.
 
 function App() {
   const [counter, setValue] = useState(0);
