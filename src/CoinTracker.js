@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import styles from "./CoinTracker.module.css";
 
-function App() {
+function CoinTracker() {
   const [loading, setLoading] = useState(true);
   const [coins, setCoins] = useState([]);
   const [dollar, setDollar] = useState(0);
@@ -33,6 +33,7 @@ function App() {
     <div className={styles.body}>
       <h1 className={styles.h1}>The Coin Tracker!</h1>
       <span className={styles.span}>Total options : {coins.length}</span>
+      {loading ? <strong>Loading ...</strong> : null}
       <form onSubmit={onSubmit}>
         <h2 className={styles.h2}>Dollar</h2>
         <input
@@ -45,23 +46,20 @@ function App() {
       </form>
       <hr className={styles.hr} />
       <h3 className={styles.h3}>₩ {dollar * 1305}</h3>
-      {loading ? (
-        <strong>Loading ...</strong>
-      ) : (
-        <select className={styles.select}>
-          {coins.map((coin) => (
-            <option key={coin.id}>
-              {dollar !== 0
-                ? `${coin.name}(${coin.symbol}) : $${
-                    coin.quotes.USD.price / (dollar * 1305)
-                  } USD`
-                : `${coin.name}(${coin.symbol}) : $${coin.quotes.USD.price} USD`}
-            </option>
-          ))}
-        </select>
-      )}
+
+      <select className={styles.select}>
+        {coins.map((coin) => (
+          <option key={coin.id}>
+            {dollar !== 0
+              ? `${coin.name}(${coin.symbol}) : $${
+                  coin.quotes.USD.price / (dollar * 1305)
+                } USD`
+              : `${coin.name}(${coin.symbol}) : $${coin.quotes.USD.price} USD`}
+          </option>
+        ))}
+      </select>
     </div>
   );
 }
 
-export default App;
+export default CoinTracker;
