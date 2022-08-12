@@ -1,43 +1,30 @@
 import { useState, useEffect } from "react";
-// 작성한 코드에 한번만 쓰고 싶은 코드와 여러번 쓸 수 있는 코드가 있을 텐데
-// useEffect를 이용하면 이를 구분해 줄 수 있다.
+
+function Hello() {
+  useEffect(() => {
+    console.log("created!");
+    return () => {
+      console.log("destroyed!");
+    };
+  }, []);
+  return <h1>Hello</h1>;
+}
+// CleanUp function 이라고 하며,
+// useEffect에서 부분적으로 반복될 코드를 작성한 뒤, return 뒤에 함수를 작성해서 만들어준다.
+
+// 위의 경우는 hello 함수의 showing state가 true이면 created!라는 텍스트를 출력해주며,
+// hello 함수의 showing state가 false이면 destroyed!라는 텍스트를 출력해준다.
+// 크게 많이 쓰이는 편은 아니지만, 실행방식을 이해하는 것이 중요함.
 
 function App() {
-  const [counter, setValue] = useState(0);
-  const [keyword, setKeyword] = useState("");
-
-  const onClick = () => setValue((prev) => prev + 1);
-  const onChange = (event) => setKeyword(event.target.value);
-
-  useEffect(() => {
-    console.log("i run only once.");
-  }, []);
-  // 여기서는 리액트가 따로 지켜볼 코드가 없기때문에 한번만 실행된다.
-  useEffect(() => {
-    console.log("i run when 'keyword' changes.");
-  }, [keyword]);
-  // if keyword changes, console code executed
-  // 특정 부분이 변화할때 이 코드를 실행하고 싶다면,
-  // {} 부분에 실행시킬 코드를 적고, 변화하는 부분을 []안에 넣어주면 된다.
-
-  useEffect(() => {
-    console.log("i run when 'counter' changes.");
-  }, [counter]);
-
-  useEffect(() => {
-    console.log("i run when 'keyword & counter' changes.");
-  }, [keyword, counter]);
-
+  const [showing, setShowing] = useState(false);
+  const onClick = () => {
+    setShowing((prev) => !prev);
+  };
   return (
     <div>
-      <input
-        value={keyword}
-        onChange={onChange}
-        type="text"
-        placeholder="Search here..."
-      />
-      <h1>{counter}</h1>
-      <button onClick={onClick}>Click me</button>
+      {showing ? <Hello /> : null}
+      <button onClick={onClick}>{showing ? "Hide" : "Show"}</button>
     </div>
   );
 }
