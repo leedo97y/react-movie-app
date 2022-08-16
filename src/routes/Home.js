@@ -19,7 +19,7 @@ function Home() {
   }, []);
 
   return (
-    <div>
+    <div className={styles.body}>
       {loading ? (
         <h1 className={styles.title}>Loading...</h1>
       ) : (

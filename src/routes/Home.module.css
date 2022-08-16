@@ -1,3 +1,19 @@
+html {
+  background-color: rgb(35, 33, 33);
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+.body {
+  color: white;
+  margin: 0px;
+}
+
 .title {
   margin: 50px 50px;
   font-family: "Montserrat", sans-serif;
@@ -10,7 +26,7 @@
   height: 70px;
   margin: 20px auto;
   text-align: center;
-  font-size: 40px;
+  font-size: 50px;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 1px;
   word-spacing: 2px;
