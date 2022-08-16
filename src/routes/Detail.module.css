@@ -60,6 +60,13 @@
   padding: 0;
   display: flex;
   color: grey;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.allGenres::-webkit-scrollbar {
+  display: none;
 }
 
 .genre {
