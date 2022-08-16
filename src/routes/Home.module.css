@@ -1,0 +1,17 @@
+.title {
+  margin: 50px 50px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.h1 {
+  width: 800px;
+  height: 70px;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 40px;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
