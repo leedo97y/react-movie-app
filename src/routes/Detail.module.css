@@ -1,0 +1,83 @@
+.body {
+  font-family: "Montserrat", sans-serif;
+  width: 500px;
+  height: 800px;
+  margin: 30px auto;
+  background-color: rgb(233, 233, 231);
+  letter-spacing: 0.5px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 7px 5px rgba(0, 0, 0, 0.14);
+}
+
+.img {
+  margin: 15px 45px 7px 45px;
+  width: 400px;
+  height: 500px;
+  border-radius: 20px;
+}
+
+.title {
+  margin: 7px 45px 3px 45px;
+  font-weight: 800;
+  font-size: 23.5px;
+}
+
+.yearBody {
+  margin: 7px 45px;
+}
+
+.year {
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+.star {
+  margin-left: 12px;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.likeBody {
+  margin: 5px 45px;
+  color: grey;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  word-spacing: 3px;
+  float: right;
+}
+
+.like {
+  /*  */
+}
+
+.runtime {
+  margin-left: 15px;
+}
+
+.allGenres {
+  margin: 0px 45px 10px 45px;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  color: grey;
+}
+
+.genre {
+  margin-top: 5px;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.desc {
+  height: 130px;
+  margin: 23px 45px;
+  word-spacing: 2px;
+  line-height: 23px;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.desc::-webkit-scrollbar {
+  display: none;
+}

@@ -1,17 +1,53 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import styles from "./Detail.module.css";
 
 function Detail() {
+  const [movieInfo, setMovieInfo] = useState([]);
+  const [genre, setGenre] = useState([]);
+
   const { id } = useParams();
+
   const getMovie = async () => {
     const json = await (
       await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
     ).json();
+    setMovieInfo(json.data.movie);
+    setGenre(json.data.movie.genres);
+    console.log(json);
   };
   useEffect(() => {
     getMovie();
   }, []);
-  return <h1>Detail</h1>;
+  return (
+    <div className={styles.body}>
+      <img
+        className={styles.img}
+        src={movieInfo.large_cover_image}
+        alt={movieInfo.title}
+      ></img>
+      <h2 className={styles.title}>{movieInfo.title}</h2>
+      <div className={styles.yearBody}>
+        <span className={styles.year}> {movieInfo.year}</span>
+        <span className={styles.star}>rate {movieInfo.rating}</span>
+      </div>
+      <div className={styles.likeBody}>
+        <span className={styles.like}> Like {movieInfo.like_count}</span>
+        <span className={styles.runtime}>
+          {movieInfo.runtime !== 0 ? `runtime ${movieInfo.runtime}m` : null}
+        </span>
+      </div>
+
+      <ul className={styles.allGenres}>
+        {genre.map((g) => (
+          <li className={styles.genre} key={g}>
+            {g}
+          </li>
+        ))}
+      </ul>
+      <p className={styles.desc}>{movieInfo.description_full}</p>
+    </div>
+  );
 }
 
 export default Detail;
