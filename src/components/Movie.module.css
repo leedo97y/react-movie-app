@@ -1,0 +1,60 @@
+div {
+  display: inline-block;
+}
+
+.body {
+  font-family: "Montserrat", sans-serif;
+  width: 400px;
+  height: 500px;
+  background-color: white;
+  color: black;
+  margin: 10px 20px;
+  padding: 10px;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.body::-webkit-scrollbar {
+  display: none;
+}
+
+.img {
+  width: 200px;
+  height: 280px;
+}
+
+.h2 {
+  margin: 0px;
+}
+
+.year {
+  margin: 0px;
+}
+
+.summary {
+  margin: 0px;
+}
+
+.summary::-webkit-scrollbar {
+}
+
+.allGenres {
+  width: 300px;
+  list-style: none;
+  margin: 0px;
+  padding: 2px 5px;
+  display: flex;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.allGenres::-webkit-scrollbar {
+  display: none;
+}
+
+.genre {
+  margin: 0px;
+  margin-right: 10px;
+}
