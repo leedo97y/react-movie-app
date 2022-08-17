@@ -1,4 +1,22 @@
-.body {
+body {
+  width: 500px;
+  height: 810px;
+  margin: 100px auto;
+  justify-content: center;
+}
+
+.loading {
+  color: white;
+  width: 500px;
+  height: 100px;
+  margin: 50px auto;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+}
+
+.allBody {
   font-family: "Montserrat", sans-serif;
   width: 500px;
   height: 810px;
