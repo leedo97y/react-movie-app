@@ -1,7 +1,7 @@
 body {
   width: 500px;
-  height: 810px;
-  margin: 100px auto;
+  height: 700px;
+  margin: 40px auto;
   justify-content: center;
 }
 
@@ -20,7 +20,7 @@ body {
   font-family: "Montserrat", sans-serif;
   width: 500px;
   height: 810px;
-  margin: 30px auto;
+  margin: -10px auto 30px auto;
   background-color: rgb(233, 233, 231);
   letter-spacing: 0.5px;
   border-radius: 20px;

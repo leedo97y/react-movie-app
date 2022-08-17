@@ -28,6 +28,7 @@ function Home() {
           <p className={styles.textForDetail}>
             If you want to earn detail info, click movie title
           </p>
+          <hr className={styles.hr} />
           {movies.map((movie) => (
             <Movie
               key={movie.id}

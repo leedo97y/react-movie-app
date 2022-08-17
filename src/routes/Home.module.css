@@ -27,7 +27,7 @@ html::-webkit-scrollbar {
 .h1 {
   width: 500px;
   height: 70px;
-  margin: 5px auto 20px auto;
+  margin: 5px auto 10px auto;
   text-align: center;
   font-size: 50px;
   font-family: "Montserrat", sans-serif;
@@ -38,10 +38,16 @@ html::-webkit-scrollbar {
 .textForDetail {
   width: 500px;
   height: 20px;
-  margin: 5px auto 20px auto;
+  margin: 0px auto 20px auto;
   text-align: center;
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 1px;
   word-spacing: 2px;
+}
+
+.hr {
+  width: 300px;
+  margin-top: 35px;
+  margin-bottom: 10px;
 }
