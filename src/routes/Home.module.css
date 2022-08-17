@@ -34,3 +34,14 @@ html::-webkit-scrollbar {
   letter-spacing: 1px;
   word-spacing: 2px;
 }
+
+.textForDetail {
+  width: 500px;
+  height: 20px;
+  margin: 5px auto 20px auto;
+  text-align: center;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}

@@ -25,6 +25,9 @@ function Home() {
       ) : (
         <div>
           <h1 className={styles.h1}>Movie list</h1>
+          <p className={styles.textForDetail}>
+            If you want to earn detail info, click movie title
+          </p>
           {movies.map((movie) => (
             <Movie
               key={movie.id}
