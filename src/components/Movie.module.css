@@ -2,17 +2,32 @@ div {
   display: inline-block;
 }
 
+.all {
+  margin: 20px auto;
+}
+
 .body {
+  align-items: center;
   font-family: "Montserrat", sans-serif;
-  width: 400px;
-  height: 500px;
+  font-weight: bolder;
+  width: 500px;
+  height: 600px;
   background-color: white;
   color: black;
-  margin: 10px 20px;
+  margin: 20px;
   padding: 10px;
+  border-radius: 25px;
   overflow: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  letter-spacing: 1px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.body:hover {
+  transition: all 0.4s linear;
+  transform: scale(1.025);
+  box-shadow: 0 0 40px 5px hsla(0, 2%, 9%, 0.1);
 }
 
 .body::-webkit-scrollbar {
@@ -21,29 +36,50 @@ div {
 
 .img {
   width: 200px;
-  height: 280px;
+  height: 290px;
+  margin: 20px 20px;
+  border-radius: 25px;
+}
+
+.rate {
+  float: right;
+  margin: 20px 15px 0px 20px;
+  font-size: 26px;
+  display: inline-block;
+  width: 85px;
+  height: 30px;
 }
 
 .h2 {
-  margin: 0px;
+  margin: 15px 10px 10px 20px;
+  margin-bottom: 5px;
+  font-size: 25px;
+  cursor: pointer;
 }
 
 .year {
-  margin: 0px;
+  display: inline-block;
+  margin: 5px 20px;
 }
 
 .summary {
-  margin: 0px;
+  margin: 20px 10px 20px 20px;
+  line-height: 23px;
+  letter-spacing: 1.2px;
+  height: 90px;
 }
 
-.summary::-webkit-scrollbar {
+.genreBox {
+  height: 30px;
+  padding-top: 10px;
 }
 
 .allGenres {
-  width: 300px;
+  float: inline-end;
+  width: 380px;
   list-style: none;
-  margin: 0px;
-  padding: 2px 5px;
+  margin: 5px 20px;
+  padding: 2px 0px;
   display: flex;
   overflow: scroll;
   -ms-overflow-style: none;
@@ -55,6 +91,6 @@ div {
 }
 
 .genre {
-  margin: 0px;
+  height: 20px;
   margin-right: 10px;
 }
