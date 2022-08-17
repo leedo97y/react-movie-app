@@ -11,20 +11,23 @@ html::-webkit-scrollbar {
 
 .body {
   color: white;
-  margin: 0px;
+  margin: 0px auto;
 }
 
 .title {
-  margin: 50px 50px;
+  width: 500px;
+  height: 100px;
+  margin: 50px auto;
+  text-align: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 50px;
 }
 
 .h1 {
-  width: 800px;
+  width: 500px;
   height: 70px;
-  margin: 20px auto;
+  margin: 5px auto 20px auto;
   text-align: center;
   font-size: 50px;
   font-family: "Montserrat", sans-serif;

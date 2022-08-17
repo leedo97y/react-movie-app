@@ -30,6 +30,7 @@ function Home() {
               key={movie.id}
               id={movie.id}
               coverImage={movie.medium_cover_image}
+              rating={movie.rating}
               title={movie.title}
               summary={movie.summary}
               year={movie.year}
